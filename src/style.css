@@ -1,0 +1,78 @@
+@font-face {
+  font-family: thin;
+  src: url("/public/fonts/Biennale Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: light;
+  src: url("/public/fonts/Biennale Light.otf") format("opentype");
+}
+@font-face {
+  font-family: regular;
+  src: url("/public/fonts/Biennale Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: normal;
+  src: url("/public/fonts/Biennale Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: semibold;
+  src: url("/public/fonts/Biennale SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: bold;
+  src: url("/public/fonts/Biennale Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: black;
+  src: url("/public/fonts/Biennale Black.otf") format("opentype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.thin {
+  font-family: thin;
+}
+.light {
+  font-family: light;
+}
+.normal {
+  font-family: normal;
+}
+.regular {
+  font-family: regular;
+}
+.semibold {
+  font-family: semibold;
+}
+.bold {
+  font-family: bold;
+}
+.black {
+  font-family: black;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #4d46fa;
+  --secondary-color: #000000;
+  --bg-color: #ffffff;
+}
+body {
+  position: relative;
+  background-color: var(--bg-color);
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+.button {
+  color: var(--bg-color);
+  background: var(--primary-color);
+  padding: 10px 16px;
+  border-radius: 12px;
+}
