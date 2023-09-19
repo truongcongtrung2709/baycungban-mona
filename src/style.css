@@ -26,10 +26,46 @@
   font-family: black;
   src: url("/public/fonts/Biennale Black.otf") format("opentype");
 }
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #4d46fa;
+  --rgb-primary-color: rgba(77, 70, 250, 0.1);
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --gray-color: #f4f2f9;
+  --dark-gray-color: #979797;
+  --orange-color: #f06336;
+  --rgb-orange-color: rgba(240, 99, 54, 0.1);
+}
+body {
+  position: relative;
+  background-color: var(--white-color);
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1730px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 3840px) {
+  .container {
+    max-width: 2730px;
+    margin: 0 auto;
+  }
+}
 
 .thin {
   font-family: thin;
@@ -52,27 +88,172 @@
 .black {
   font-family: black;
 }
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.logo-text {
+  font-size: 24px;
+  line-height: 36.38px;
+  font-family: semibold;
 }
-:root {
-  --primary-color: #4d46fa;
-  --secondary-color: #000000;
-  --bg-color: #ffffff;
+.light-xs-text {
+  font-size: 12px;
+  line-height: 17.71px;
+  font-family: light;
+  color: var(--black-color);
 }
-body {
-  position: relative;
-  background-color: var(--bg-color);
+.pri-light-xs-text {
+  font-size: 12px;
+  line-height: 17.71px;
+  font-family: light;
+  color: var(--primary-color);
 }
-.container {
-  max-width: 1230px;
-  margin: 0 auto;
+.regular-xs-text {
+  font-size: 12px;
+  line-height: 17.71px;
+  font-family: regular;
+  color: var(--black-color);
 }
-.button {
-  color: var(--bg-color);
+.semi-xs-text {
+  font-size: 12px;
+  line-height: 18.19px;
+  font-family: semibold;
+  color: var(--black-color);
+}
+.light-sm-text {
+  font-size: 14px;
+  line-height: 20.66px;
+  font-family: light;
+  color: var(--black-color);
+}
+
+.regular-sm-text {
+  font-size: 14px;
+  line-height: 20.66px;
+  font-family: regular;
+  color: var(--black-color);
+}
+.semi-sm-text {
+  font-size: 14px;
+  line-height: 21.22px;
+  font-family: semibold;
+  color: var(--black-color);
+}
+.pri-semi-sm-text {
+  font-size: 14px;
+  line-height: 21.22px;
+  font-family: semibold;
+  color: var(--primary-color);
+}
+.semi-base-text {
+  font-size: 16px;
+  line-height: 24.26px;
+  font-family: semibold;
+  color: var(--black-color);
+}
+.pri-semi-base-text {
+  font-size: 16px;
+  line-height: 24.26px;
+  font-family: semibold;
+  color: var(--primary-color);
+}
+.semi-lg-text {
+  font-size: 18px;
+  line-height: 36.38px;
+  font-family: semibold;
+}
+.esquire {
+  background: var(--rgb-primary-color);
+  display: inline-block;
+  padding: 5px 3px;
+  border-radius: 100px;
+
+  font-size: 10px;
+  font-family: semibold;
+  line-height: 15.16px;
+}
+.black-title {
+  font-family: semibold;
+  font-size: 14px;
+  line-height: 21.22px;
+  color: var(--black-color);
+}
+.avatar {
+  background: var(--dark-gray-color);
+
+  font-size: 14px;
+  font-family: semibold;
+  line-height: 30px;
+  color: var(--white-color);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.avatar-active {
+  background: var(--primary-color);
+
+  font-size: 14px;
+  font-family: semibold;
+  line-height: 30px;
+  color: var(--white-color);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.btn-primary {
+  color: var(--white-color);
   background: var(--primary-color);
   padding: 10px 16px;
   border-radius: 12px;
+  line-height: 21.22px;
+  font-size: 14px;
+  font-family: normal;
+  text-align: center;
+}
+.btn-orange {
+  color: var(--white-color);
+  background: var(--orange-color);
+  padding: 10px 16px;
+  border-radius: 12px;
+  line-height: 21.22px;
+  font-size: 14px;
+  font-family: normal;
+  text-align: center;
+}
+.btn-opacity-orange {
+  color: var(--orange-color);
+  background: var(--rgb-orange-color);
+  padding: 10px 16px;
+  border-radius: 12px;
+  line-height: 21.22px;
+  font-size: 14px;
+  font-family: normal;
+  text-align: center;
+}
+.btn-white {
+  color: var(--primary-color);
+  background: var(--white-color);
+  padding: 10px 16px;
+  border-radius: 12px;
+  line-height: 21.22px;
+  font-size: 14px;
+  font-family: normal;
+  text-align: center;
+}
+.btn-opacity-primary {
+  color: var(--primary-color);
+  background: var(--rgb-primary-color);
+  font-family: semibold;
+  font-size: 12px;
+  line-height: 18.19px;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+.price {
+  color: var(--orange-color);
+  font-family: semibold;
+  line-height: 21.22px;
+
+  font-size: 14px;
 }

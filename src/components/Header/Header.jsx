@@ -1,23 +1,32 @@
 import React, { useState } from "react";
-
+import { useLocation } from "react-router-dom";
 const Header = () => {
+  const { pathname } = useLocation();
   const [isToggle, setToggle] = useState(false);
   function ToggleMenu() {
     setToggle(!isToggle);
   }
   return (
-    <header className="absolute z-10  bg-transparent w-full">
+    <header
+      className={`${
+        pathname === "/"
+          ? "absolute top-0 z-10 bg-transparent w-full pt-12"
+          : " static bg-primary  py-[20px]"
+      }   `}
+    >
       <div className="container">
         <nav className="">
-          <div className=" flex flex-wrap items-center justify-between p-4">
+          <div className=" flex flex-wrap items-center justify-between ">
             <a href="/" className="flex items-center">
-              <img
-                width={144.06}
-                height={22.13}
-                src="/images/baycungbanlogo.svg"
-                className="h-8 mr-[14.26px]"
-                alt="logo"
-              />
+              <p
+                className={`${
+                  pathname === "/"
+                    ? "text-black logo-text mr-[14.26px]"
+                    : "text-white logo-text mr-[14.26px]"
+                }`}
+              >
+                Baycungban
+              </p>
               <img
                 width={20}
                 height={20}
@@ -36,7 +45,11 @@ const Header = () => {
             <div className="flex md:order-2">
               <button
                 type="button"
-                className="button leading-lg text-sm  text-center mr-3 md:mr-0"
+                className={`${
+                  pathname === "/"
+                    ? "btn-primary mr-3 md:mr-0  "
+                    : "btn-white mr-3 md:mr-0   "
+                }`}
               >
                 Booking now
               </button>
@@ -64,15 +77,27 @@ const Header = () => {
               </button>
             </div>
             <div
-              className={`${
-                isToggle ? "block " : "hidden"
-              } items-center justify-between  w-full md:flex md:w-auto md:order-1 text-center rounded-lg  border-primary mt-2 pt-0 bg-background md:bg-transparent`}
+              className={`${isToggle ? "block " : "hidden"} ${
+                pathname === "/"
+                  ? "items-center justify-between  w-full md:flex md:w-auto md:order-1 text-center bg-opacity-50 sm:text-right sm:pr-4 rounded-lg  pt-0 bg-white md:bg-transparent"
+                  : "items-center justify-between  w-full md:flex md:w-auto md:order-1 text-center bg-opacity-50 sm:text-right sm:pr-4  rounded-lg  pt-0 bg-primary  md:bg-transparent"
+              } `}
             >
-              <ul className="flex flex-col p-4 md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0  leading-md light ">
+              <ul
+                className={`${
+                  pathname === "/"
+                    ? "flex flex-col  md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0  leading-md light text-black"
+                    : "flex flex-col  md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0  leading-md light text-white"
+                }`}
+              >
                 <li>
                   <a
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-secondary  hover:bg-primary hover:text-white  rounded md:bg-transparent md:text-secondary md:hover:text-primary md:hover:bg-transparent md:p-0"
+                    className={` ${
+                      pathname === "/"
+                        ? "block  hover:bg-primary hover:text-white  rounded md:bg-transparent md:hover:text-primary md:hover:bg-transparent md:p-0 md:m-0 "
+                        : "block  hover:rounded-[100px] hover:bg-white hover:bg-opacity-10 hover:text-white  rounded md:bg-transparent md:p-0 md:m-0 "
+                    } `}
                     aria-current="page"
                   >
                     Promotion
@@ -80,8 +105,12 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
-                    className="block py-2 pl-3 pr-4 text-secondary  hover:bg-primary hover:text-white  rounded md:bg-transparent md:text-secondary md:hover:text-primary md:hover:bg-transparent md:p-0 "
+                    href="/schedule"
+                    className={` ${
+                      pathname === "/"
+                        ? "block  hover:bg-primary hover:text-white  rounded md:bg-transparent md:hover:text-primary md:hover:bg-transparent md:p-0 md:m-0  mt-5"
+                        : "block  hover:rounded-[100px] hover:bg-white hover:bg-opacity-10 hover:text-white  rounded md:bg-transparent md:p-0 md:m-0 mt-5"
+                    } `}
                   >
                     Flight Schedule
                   </a>
@@ -89,7 +118,11 @@ const Header = () => {
                 <li>
                   <a
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-secondary  hover:bg-primary hover:text-white  rounded md:bg-transparent md:text-secondary md:hover:text-primary md:hover:bg-transparent md:p-0"
+                    className={` ${
+                      pathname === "/"
+                        ? "block  hover:bg-primary hover:text-white  rounded md:bg-transparent md:hover:text-primary md:hover:bg-transparent md:p-0 md:m-0  mt-5"
+                        : "block  hover:rounded-[100px] hover:bg-white hover:bg-opacity-10 hover:text-white  rounded md:bg-transparent md:p-0 md:m-0 mt-5"
+                    } `}
                   >
                     About us
                   </a>
@@ -97,7 +130,11 @@ const Header = () => {
                 <li>
                   <a
                     href="/"
-                    className="block py-2 pl-3 pr-4 text-secondary  hover:bg-primary hover:text-white  rounded md:bg-transparent md:text-secondary md:hover:text-primary md:hover:bg-transparent md:p-0"
+                    className={` ${
+                      pathname === "/"
+                        ? "block  hover:bg-primary hover:text-white  rounded md:bg-transparent md:hover:text-primary md:hover:bg-transparent md:p-0 md:m-0  mt-5"
+                        : "block  hover:rounded-[100px] hover:bg-white hover:bg-opacity-10 hover:text-white  rounded md:bg-transparent md:p-0 md:m-0 mt-5"
+                    } `}
                   >
                     Payment Guide
                   </a>
