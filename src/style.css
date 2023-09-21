@@ -66,6 +66,9 @@ body {
     margin: 0 auto;
   }
 }
+.checkbox:checked + .check-icon {
+  display: flex;
+}
 
 .thin {
   font-family: thin;
@@ -116,6 +119,12 @@ body {
   line-height: 18.19px;
   font-family: semibold;
   color: var(--black-color);
+}
+.pri-semi-xs-text {
+  font-size: 12px;
+  line-height: 18.19px;
+  font-family: semibold;
+  color: var(--primary-color);
 }
 .light-sm-text {
   font-size: 14px;
@@ -210,6 +219,7 @@ body {
   font-size: 14px;
   font-family: normal;
   text-align: center;
+  cursor: pointer;
 }
 .btn-orange {
   color: var(--white-color);
@@ -220,6 +230,7 @@ body {
   font-size: 14px;
   font-family: normal;
   text-align: center;
+  cursor: pointer;
 }
 .btn-opacity-orange {
   color: var(--orange-color);
@@ -230,6 +241,7 @@ body {
   font-size: 14px;
   font-family: normal;
   text-align: center;
+  cursor: pointer;
 }
 .btn-white {
   color: var(--primary-color);
@@ -240,6 +252,7 @@ body {
   font-size: 14px;
   font-family: normal;
   text-align: center;
+  cursor: pointer;
 }
 .btn-opacity-primary {
   color: var(--primary-color);
@@ -249,6 +262,7 @@ body {
   line-height: 18.19px;
   padding: 10px 16px;
   border-radius: 12px;
+  cursor: pointer;
 }
 .price {
   color: var(--orange-color);

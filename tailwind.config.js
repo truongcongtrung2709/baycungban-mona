@@ -27,6 +27,7 @@ module.exports = {
         gray: "#F4F2F9",
         "dark-gray": "#979797",
         orange: " #F06336",
+        red: "#ff9494",
       },
       lineHeight: {
         "3xs": "15.16px",

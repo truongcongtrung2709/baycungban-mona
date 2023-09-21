@@ -105,7 +105,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="/schedule"
+                    href="/flightschedule"
                     className={` ${
                       pathname === "/"
                         ? "block  hover:bg-primary hover:text-white  rounded md:bg-transparent md:hover:text-primary md:hover:bg-transparent md:p-0 md:m-0  mt-5"

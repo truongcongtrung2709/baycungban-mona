@@ -7,7 +7,7 @@ const Footer = () => {
     <footer
       className={`${
         pathname === "/"
-          ? "overflow-hidden sm:bg-transparent bg-gray relative xl:mt-[37px] md:mt-[350px] sm:mt-[650px]"
+          ? " sm:bg-transparent bg-gray relative xl:mt-[37px] md:mt-[350px] sm:mt-[650px] "
           : "overflow-hidden bg-gray relative "
       } `}
     >
